@@ -1,0 +1,17 @@
+<adapter-config name="TestService" adapter="Database Adapter" wsdlLocation="TestService.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory location="eis/DB/SR3-12050955521" UIConnectionName="SR3-12050955521" adapterRef=""/>
+  <endpoint-interaction portType="TestService_ptt" operation="merge">
+    <interaction-spec className="oracle.tip.adapter.db.DBWriteInteractionSpec">
+      <property name="DescriptorName" value="TestService.Testtable"/>
+      <property name="DmlType" value="merge"/>
+      <property name="OutputCompletedXml" value="true"/>
+      <property name="MappingsMetaDataURL" value="TestService-or-mappings.xml"/>
+      <property name="OptimizeMerge" value="true"/>
+      <property name="DetectOmissions" value="true"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+      <property name="CacheUsage" value="read-write"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>

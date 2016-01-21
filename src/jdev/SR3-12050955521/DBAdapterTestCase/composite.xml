@@ -10,5 +10,18 @@
            xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
            xmlns:orawsp="http://schemas.oracle.com/ws/2006/01/policy"
            xmlns:ui="http://xmlns.oracle.com/soa/designer/">
+  <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/SR3-12050955521/DBAdapterTestCase/TestService"
+          location="TestService.wsdl" importType="wsdl"/>
   <property name="productVersion" type="xs:string" many="false">11.1.1.7.8</property>
+  <reference name="TestService" ui:wsdlLocation="TestService.wsdl">
+    <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/db/SR3-12050955521/DBAdapterTestCase/TestService#wsdl.interface(TestService_ptt)"/>
+    <binding.jca config="TestService_db.jca"/>
+    <property name="jca.retry.count" type="xs:int" many="false" override="may">4</property>
+    <property name="jca.retry.interval" type="xs:int" many="false"
+              override="may">1</property>
+    <property name="jca.retry.backoff" type="xs:int" many="false"
+              override="may">2</property>
+    <property name="jca.retry.maxInterval" type="xs:string" many="false"
+              override="may">120</property>
+  </reference>
 </composite>

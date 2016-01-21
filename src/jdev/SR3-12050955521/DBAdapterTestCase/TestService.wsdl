@@ -1,0 +1,22 @@
+<?binding.jca TestService_db.jca?>
+<wsdl:definitions name="TestService" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/SR3-12050955521/DBAdapterTestCase/TestService" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/SR3-12050955521/DBAdapterTestCase/TestService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/TestService">
+    <plt:partnerLinkType name="TestService_plt">
+        <plt:role name="TestService_role">
+            <plt:portType name="tns:TestService_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/TestService" schemaLocation="xsd/TestService_table.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="TesttableCollection_msg">
+        <wsdl:part name="TesttableCollection" element="top:TesttableCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="TestService_ptt">
+        <wsdl:operation name="merge">
+            <wsdl:input message="tns:TesttableCollection_msg"/>
+            <wsdl:output message="tns:TesttableCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+   <entry key="TESTTABLE.TS:db_column_type">TIMESTAMP(6)</entry>
+   <entry key="TESTTABLE:db_column_1">TS</entry>
+   <entry key="TESTTABLE:db_column_0">ID</entry>
+   <entry key="TESTTABLE:db_table_type">TABLE</entry>
+   <entry key="TESTTABLE.TS:db_column_not_null">true</entry>
+   <entry key="TESTTABLE.ID:db_column_precision">0</entry>
+   <entry key="TESTTABLE.ID:db_column_not_null">true</entry>
+   <entry key="TESTTABLE.ID:db_column_type">NUMBER</entry>
+   <entry key="root_descriptor_alias">TESTTABLE</entry>
+</properties>
