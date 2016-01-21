@@ -34,7 +34,7 @@
          <descriptor-type>independent</descriptor-type>
          <sequencing>
             <sequence-name>S_TESTTABLE</sequence-name>
-            <sequence-field table="TESTTABLE" name="ID"/>
+            <sequence-field name="ID"/>
          </sequencing>
          <caching>
             <cache-type>weak-reference</cache-type>
